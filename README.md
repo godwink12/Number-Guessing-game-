@@ -1,27 +1,31 @@
 # Number Guessing Game 🎮
-A simple, interactive console game built with Python.
 
-# 📝 Project Overview
-This project was created as a step-by-step application of core Python concepts. The computer selects a secret number, and the player has to guess it using "High/Low" hints.
+A simple, interactive console game built with Python designed to practice core programming logic and input validation.
 
-# 🧠 Logic & Structure
-I followed a "Validation-First" approach to ensure the code is robust:
+## 📝 Project Overview
+This project was developed to transition from basic syntax to functional application. It challenges the player to find a secret number chosen by the computer within a specific range, providing real-time feedback on each attempt.
 
-Setup: The game initializes a random number and a "tries" counter.
+## 🧠 Core Logic & Structure
+The project follows a **"Security Checkpoint"** architecture to ensure clean and stable execution:
 
-The Loop: Uses a while loop to keep the game running until the correct guess is made.
+1. **Setup (Preparation):**
+   - Uses the `random` module to pick a secret number.
+   - Initializes a `tries` counter to track player performance.
 
-The Bouncer (Validation):
+2. **The Game Loop:**
+   - Employs a `while` loop that runs indefinitely until the user successfully guesses the number.
 
-Checks if the input is actually a number.
+3. **The Bouncer (Validation):**
+   - **Type Checking:** Ensures the user enters an integer, not text.
+   - **Range Checking:** Validates that the guess is within the allowed bounds (e.g., 1-100).
+   - *This prevents the program from crashing on "bad" input.*
 
-Checks if the number is within the 1-100 range.
+4. **Comparison Logic:**
+   - Evaluates if the guess is **Too High**, **Too Low**, or **Correct**.
 
-Game Logic: Compares the guess to the secret number and provides feedback.
-
-# 🚀 Future Upgrades
-[ ] Add a high-score system (leaderboard).
-
-[ ] Add difficulty levels (Easy, Medium, Hard).
-
-[ ] Create a Graphical User Interface (GUI).
+## 🛠️ How to Run
+1. Ensure you have Python installed.
+2. Clone this repository.
+3. Run the script using:
+   ```bash
+   python main.py
